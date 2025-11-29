@@ -43,3 +43,5 @@ ch14/.vscode/
 
 ch15/ch15_env/
 ch15/.vscode/
+
+.env
