@@ -1,4 +1,0 @@
-API(Application Programing Interface): 서로 다른 프로그램이 데이터를 주고받고 기능을 공유하도록 돕는 집합.
-OpenAI의 API는 platform.openai.com에서 확인 가능
-
-API키: 웹 프로그램과 openai서버가 통신할 때 사용자 식별을 위해 사용.
