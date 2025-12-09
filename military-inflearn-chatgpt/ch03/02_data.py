@@ -11,7 +11,7 @@ dataframe = pd.DataFrame({
 
 # DataFrame
 # use_container_width 기능은 데이터프레임을 컨테이너 크기에 확장할 때 사용합니다. (True/False)
-st.dataframe(dataframe, use_container_width=False)
+st.dataframe(dataframe, width = "stretch")
 
 
 # 테이블(static)

@@ -5,26 +5,26 @@ import numpy as np
 import plotly.graph_objects as go
 
 
-# #Line Chart
-# chart_data = pd.DataFrame(
-#     np.random.randn(20, 3),
-#     columns=['a', 'b', 'c'])
+#Line Chart
+chart_data = pd.DataFrame(
+    np.random.randn(20, 3),
+    columns=['a', 'b', 'c'])
 
-# st.line_chart(chart_data)
+st.line_chart(chart_data)
 
-# #Bar Chart
-# chart_data = pd.DataFrame(
-#     np.random.randn(20, 3),
-#     columns=["a", "b", "c"])
+#Bar Chart
+chart_data = pd.DataFrame(
+    np.random.randn(20, 3),
+    columns=["a", "b", "c"])
 
-# st.bar_chart(chart_data)
+st.bar_chart(chart_data)
 
-# #matploutlib
-# arr = np.random.normal(1, 1, size=100)
-# fig, ax = plt.subplots()
-# ax.hist(arr, bins=20)
+#matploutlib
+arr = np.random.normal(1, 1, size=100)
+fig, ax = plt.subplots()
+ax.hist(arr, bins=20)
 
-# st.pyplot(fig)
+st.pyplot(fig)
 
 
 #Plotly
@@ -37,4 +37,4 @@ fig = go.Figure(data=go.Scatter(
 ))
 
 # Plot!
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width="stretch")
