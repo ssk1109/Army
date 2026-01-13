@@ -1,0 +1,14 @@
+p {
+    color:red;
+}
+
+/* id 지정 */
+#here {
+    color: green;
+}
+
+/* class 지정 */
+.item-list {
+    background-color: yellow;
+    padding: 10px;
+}
