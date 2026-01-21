@@ -33,7 +33,7 @@ st.download_button(
     label='CSV로 다운로드',
     data=dataframe.to_csv(), 
     file_name='sample.csv', 
-    mime='text/csv'
+    #mime='text/csv'
 )
 
 # 체크 박스
@@ -44,35 +44,35 @@ if agree:
 
 # 라디오 선택 버튼
 mbti = st.radio(
-    '당신의 MBTI는 무엇입니까?',
-    ('ISTJ', 'ENFP', '선택지 없음'))
+    '당신이 좋아하는 음식은?',
+    ('한식', '양식', '없음'))
 
-if mbti == 'ISTJ':
-    st.write('당신은 :blue[현실주의자] 이시네요')
-elif mbti == 'ENFP':
-    st.write('당신은 :green[활동가] 이시네요')
+if mbti == '한식':
+    st.write('맛있는 :green[한식]')
+elif mbti == '양식':
+    st.write('고급진 :red[양식]')
 else:
-    st.write("당신에 대해 :red[알고 싶어요]:grey_exclamation:")
+    st.write("더 고민해봐요")
 
 # 선택 박스
-mbti = st.selectbox(
-    '당신의 MBTI는 무엇입니까?',
-    ('ISTJ', 'ENFP', '선택지 없음'), 
-    index=2
+food = st.selectbox(
+	'당신이 좋아하는 음식은?',
+	('한식', '양식', '없음'),
+	index = 2    # 기본으로 설정할 선택지. 여기선 '없음'으로 선택됨.
 )
 
-if mbti == 'ISTJ':
-    st.write('당신은 :blue[현실주의자] 이시네요')
-elif mbti == 'ENFP':
-    st.write('당신은 :green[활동가] 이시네요')
+if food == '한식':
+	st.write('맛있는 :green[한식]')
+elif food == '양식':
+	st.write('고급진 :red[양식]')
 else:
-    st.write("당신에 대해 :red[알고 싶어요]:grey_exclamation:")
+	st.write('더 고민해봐요')
 
 # 다중 선택 박스
 options = st.multiselect(
-    '당신이 좋아하는 과일은 뭔가요?',
-    ['망고', '오렌지', '사과', '바나나'],
-    ['망고', '오렌지'])
+	'당신이 좋아하는 과일은?',
+	['망고', '오렌지', '사과', '바나나'],
+	['오렌지', '사과']
+)
 
-st.write(f'당신의 선택은: :red[{options}] 입니다.')
-
+st.write(f'당신의 선택은: :orange[{options}] 입니다.')
